@@ -1,4 +1,4 @@
-DIGITS = {str(d): True for d in range(10)}
+DIGITS = {str(d): True for d in range(1, 10)}
 
 def word_to_num(word: str) -> int:
     nums = [int(ch) for ch in word if ch in DIGITS]
