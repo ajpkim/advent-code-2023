@@ -28,6 +28,10 @@ def word_to_num(word: str) -> int:
 
     return int(nums[0]) * 10 + int(nums[-1])
 
+
+# Regex version: replace the string numbers with digit chars
+# e.g. 'three' -> '3' and use part 1 solution after
+
 def read_words(input_file):
     with open(input_file, 'r') as f:
         return f.readlines()

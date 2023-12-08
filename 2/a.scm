@@ -1,5 +1,8 @@
 ;; Day 2 Part 1: 12 red cubes, 13 green cubes, and 14 blue cubes
 
+;; More idiomatic version after review... doesn't need to be defined itself really
+;;   (fold-left + 0 nums))  ---> accumulate
+
 (define (sum-list nums)
   (if (= 1 (length nums))
       (car nums)
@@ -15,6 +18,9 @@
 	    (reverse lines)
 	    (loop (cons line lines) (read-line source)))))))
 
+
+;; There IS a built in method for this actually `string-trim`
+;; (string-trim "  abc" char-set:alphanumeric) -> "abc"
 (define (remove-leading-spaces str)
   (let loop ((index 0))
     (cond ((= index (string-length str)) "")
